@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 6px;
+  color: var(--rajah);
+  font-size: 26px;
+}
+
+.nav-links {
+  width: 60%;
+  font-weight: 100;
+  font-size: 26px;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  list-style: none;
+  /* flex-grow: 2; */
+}
+
+.nav-link {
+  padding: 6px;
+  margin: 6px;
+}
+
+.nav-link:hover{
+  color: var(--rajah);
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: 200;
+}

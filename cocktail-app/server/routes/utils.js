@@ -2,9 +2,9 @@ const { nanoid } = require('nanoid');
 const notFound = (item, id)=> `${item} with id of ${id} not found`;
 const getItemById = (itemArr, id) => itemArr.find(item => item.id === id);
 
-const createCocktail = input => {
+const createCocktail = (input, lastId) => {
   return {
-    id: nanoid(6),
+    id: (lastId + 1).toString(),
     name: input.name,
     ingredients: input.ingredients,
     recipe: input.recipe,

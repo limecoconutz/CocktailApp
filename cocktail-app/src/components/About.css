@@ -1,0 +1,27 @@
+.about-banner{
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.container{
+  margin: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  position: relative;
+  color: var(--charcoal);
+}
+
+.about-subtitle {
+  font-size: 20px;
+  font-weight: 100;
+  color: var(--charcoal);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.text-orange {
+  color: var(--rajah);
+}

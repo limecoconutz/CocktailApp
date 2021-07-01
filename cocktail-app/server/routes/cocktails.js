@@ -5,11 +5,11 @@ const cocktails = require('../db/cocktails.js');
 const createCocktail = require('./utils').createCocktail;
 
 router.get('/', (req, res, next) => {
-  res.json(cocktails);
+  res.send(cocktails);
 });
 
 router.get('/:id', (req, res, next) => {
-  const foundCocktail = cocktails.cocktails.find(cocktail => cocktail.id === req.params.id);
+  const foundCocktail = cocktails.cocktails.find(cocktail => cocktail.id === Number(req.params.id));
   if(!foundCocktail) {
     return res.json('Not Found').status(404);
   }
@@ -17,7 +17,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  const newCocktail = createCocktail(req.body);
+  const newCocktail = createCocktail(req.body, cocktails.length + 1);
   cocktails.cocktails.push(newCocktail);
   return res.status(201).json(cocktails);
 });

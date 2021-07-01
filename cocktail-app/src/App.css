@@ -1,0 +1,12 @@
+@import url('./stylesheets/_colors.css');
+@import url('./stylesheets/_fonts.css');
+
+.image-large {
+  height: 200px;
+  width: 200px;
+}
+
+a{
+  text-decoration: none;
+  color: var(--charcoal);
+}

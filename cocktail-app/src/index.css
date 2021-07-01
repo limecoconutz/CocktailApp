@@ -1,4 +1,6 @@
 body {
+  background-color: var(--seashell);
+  color: var(--gunmetal);
   margin: 0;
   padding: 0;
 }

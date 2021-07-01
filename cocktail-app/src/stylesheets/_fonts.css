@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Rhodium+Libre&display=swap');
+
+p, a{
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Rhodium Libre', serif;
+}
