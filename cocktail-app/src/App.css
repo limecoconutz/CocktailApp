@@ -10,3 +10,18 @@ a{
   text-decoration: none;
   color: var(--charcoal);
 }
+
+.home, .about, .gallery {
+  animation: fadeIn linear 0.8s;
+  -webkit-animation: fadeIn linear 0.8s;
+}
+
+.cocktail{
+  animation: fadeIn linear 1.2s;
+  -webkit-animation: fadeIn linear 1.2s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
