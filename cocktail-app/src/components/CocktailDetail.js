@@ -3,19 +3,20 @@ import './CocktailDetail.css';
 
 function CocktailDetail({match}) {
   useEffect(() => {
-    fetchCocktail();
+    setTimeout(() => {
+      const fetchCocktail = async () => {
+        const fetchedCocktail = await fetch(`/api/cocktails/${match.params.id}`);
+        const cocktail = await fetchedCocktail.json();
+        console.log(cocktail.ingredients);
+        setCocktail(cocktail);
+        setIngredients(cocktail.ingredients);
+      }
+      fetchCocktail();
+    }, 300)
   }, []);
 
   const [cocktail, setCocktail] = useState({});
   const [ingredients, setIngredients] = useState([]);
-
-  const fetchCocktail = async () => {
-    const fetchedCocktail = await fetch(`/api/cocktails/${match.params.id}`);
-    const cocktail = await fetchedCocktail.json();
-    console.log(cocktail.ingredients);
-    setCocktail(cocktail);
-    setIngredients(cocktail.ingredients);
-  }
 
   return (
     <div className="cocktail">

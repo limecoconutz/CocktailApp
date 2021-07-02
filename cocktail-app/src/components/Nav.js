@@ -1,14 +1,15 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
 
 import './Nav.css';
 
 function Nav() {
   return (
-    <nav>
+    <nav className='nav'>
       <h3 className="logo"><i className="fas fa-cocktail"></i></h3>
-      <ul className="nav-links">
-        <NavLink to='/' exact className="nav-link">
+      <ul className="nav-links"> 
+      <NavLink to='/' exact className="nav-link">
           <li>Home</li>
         </NavLink>
         <NavLink to='/allcocktails' className="nav-link">

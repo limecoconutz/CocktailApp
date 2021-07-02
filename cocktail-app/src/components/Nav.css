@@ -3,8 +3,16 @@ nav {
   justify-content: space-between;
 }
 
+.fa-cocktail {
+  border: solid 2px var(--rajah);
+  padding: 6px;
+  border-radius: 50px;
+  transform: scale(-1, 1);
+}
+
 .logo {
   padding: 6px;
+  margin: 18px;
   color: var(--rajah);
   font-size: 26px;
 }
