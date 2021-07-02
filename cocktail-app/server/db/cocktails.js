@@ -45,7 +45,7 @@ const cocktails = [
       },
       {
         name: 'Carbonated water',
-        quantity: ''
+        quantity: '1 cup'
       }
     ],
     recipe: 'Shake all ingredients with ice cubes, except soda water. Pour into glass. Top with soda water.',
@@ -74,7 +74,7 @@ const cocktails = [
       },
       {
         name: 'Soda water',
-        quantity: ''
+        quantity: '1 cup'
       }
     ],
     recipe: 'Muddle mint leaves with sugar and lime juice. Add a splash of soda water and fill the glass with cracked ice. Pour the rum and top with soda water. Garnish and serve with straw.',
@@ -124,7 +124,7 @@ const cocktails = [
       },
       {
         name: 'Blackberries',
-        quantity: ''
+        quantity: 'a handfull'
       }
     ],
     recipe: 'Slowly shake in a shaker with ice, strain into a square whiskey glass. Top with fresh ice. Add the blackberries to garnish. Add flowers and a green leaf for a special look!',

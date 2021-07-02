@@ -14,15 +14,6 @@
   background-position: center;
 }
 
-/* .cocktail {
-  animation: fadeIn linear 1s;
-  -webkit-animation: fadeIn linear 2s;
-}
-
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-} */
 
 .cocktail-details{
   transition: all 0.5s ease;
@@ -50,7 +41,6 @@
 
 .ingredients-quantity{
   transition: opacity 3s;
-  opacity: 0;
   font-weight: 200;
   padding: 6px;
   margin: 0;
