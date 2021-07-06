@@ -22,14 +22,13 @@
 }
 
 @media (min-width: 1200px) {
-.logo, .nav {
-  font-size: 1.5em;
-  margin-right: 8px;
-}
-.nav-link{
-  margin: 6px;
-}
-
+  .logo, .nav {
+    font-size: 1.5em;
+    margin-right: 8px;
+  }
+  .nav-link{
+    margin: 6px;
+  }
 }
 
 .nav-links {

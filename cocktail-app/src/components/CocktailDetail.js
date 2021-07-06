@@ -26,23 +26,27 @@ function CocktailDetail({match}) {
   const [ingredients, setIngredients] = useState([]);
 
   return (
-    <div className="cocktail">
+    <div>
       <div className="cocktail-image"
       style={{backgroundImage:`url(${cocktail.imageUrl})`}}
       ></div>
-      <div className="cocktail-details">
-        <h1>{cocktail.name}</h1>
-        <h2>Ingredients: </h2>
+      <div className="cocktail-details container">
+        <h1 className="cocktail-details-title">{cocktail.name}</h1>
+        <div className="cocktail-details-text">
         <section className="ingredients">
+        <h2 className="cocktail-subtitle">Ingredients: </h2>
           {ingredients.map((ingredient, index) => (
             <div key={index} className="ingredients-details">
-              <h3 className="ingredients-name">{ingredient.name}:</h3>
+              <h3 className="ingredients-name">{ingredient.name}</h3>
               <p className="ingredients-quantity">{ingredient.quantity}</p>
             </div>
           ))}
         </section>
-        <h2 className="cocktail-instructions">Instructions: </h2>
-        <p className="cocktail-instructions-details">{cocktail.recipe}</p>
+        <section className="instructions">
+          <h2 className="cocktail-subtitle">Instructions: </h2>
+          <p className="cocktail-instructions-details">{cocktail.recipe}</p>
+        </section>
+        </div>
       </div>
     </div>
   );
