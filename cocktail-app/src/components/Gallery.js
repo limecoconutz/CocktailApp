@@ -4,19 +4,25 @@ import './Gallery.css';
 
 function Gallery() {
 
-
   useEffect(()=>{
-    setTimeout(() => {
-      const fetchCocktails = async () => {
-        const data = await fetch('api/cocktails');
-        const allCocktails = await data.json();
-        const cocktailsArr = allCocktails.cocktails;
-        setCocktails(cocktailsArr);
+    let abortController = new AbortController();
+    let isAborted = abortController.signal.aborted;
+    const fetchCocktails = async () => {
+      const data = await fetch('api/cocktails');
+      const allCocktails = await data.json();
+      const cocktailsArr = allCocktails.cocktails;
+      isAborted = abortController.signal.aborted;
+      if(!isAborted){
+      setCocktails(cocktailsArr);
       }
-      fetchCocktails();
-    }, 300)
-  });
-  // linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)
+      return;
+    }
+    fetchCocktails();
+    return () => {
+      abortController.abort();
+    };
+      // setTimeout(() => {}, 300)
+  }, []);
   const [cocktails, setCocktails] = useState([]);
   return(
     <div className="gallery" data-router-wrapper>

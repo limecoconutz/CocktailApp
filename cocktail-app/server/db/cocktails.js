@@ -103,7 +103,7 @@ const cocktails = [
   },
   {
     id: 5,
-    name: 'Pink Moon Cocktail',
+    name: 'Pink Moon',
     description: 'Built with gin and blackberries, this fancy pink drink will make you think of summer',
     ingredients: [
       {

@@ -3,17 +3,24 @@ import './CocktailDetail.css';
 
 function CocktailDetail({match}) {
   useEffect(() => {
-    setTimeout(() => {
+    let abortController = new AbortController();
+    let isAborted = abortController.signal.aborted;
       const fetchCocktail = async () => {
         const fetchedCocktail = await fetch(`/api/cocktails/${match.params.id}`);
         const cocktail = await fetchedCocktail.json();
-        console.log(cocktail.ingredients);
-        setCocktail(cocktail);
-        setIngredients(cocktail.ingredients);
+        isAborted = abortController.signal.aborted;
+        if(!isAborted){
+          setCocktail(cocktail);
+          setIngredients(cocktail.ingredients);
+        }
+        return;
       }
       fetchCocktail();
-    }, 300)
-  }, []);
+      return () => {
+        abortController.abort();
+      };
+      // setTimeout(() => {}, 300)
+  }, [match.params.id]);
 
   const [cocktail, setCocktail] = useState({});
   const [ingredients, setIngredients] = useState([]);

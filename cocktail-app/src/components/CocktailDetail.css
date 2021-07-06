@@ -1,26 +1,20 @@
 .cocktail{
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .cocktail-image{
-  grid-template-columns: 1fr;
   height: 100vh;
-  width: 800px;
-  min-width: 800px;
+  min-width: 80%;
   position: sticky;
   top: 0;
   background-size: cover;
   background-position: center;
 }
 
-
 .cocktail-details{
-  transition: all 0.5s ease;
-  opacity: 0.8;
-  grid-template-columns: 2fr;
-  padding: 8px;
-  margin: 6px;
+  grid-template-columns: 1fr;
 }
 
 .cocktail-details h2{
@@ -28,26 +22,52 @@
   color: var(--rajah);
 }
 
-.ingredients{
-  margin: 0px 8px;
-  padding: 0px 8px;
-  border-left: solid 2px var(--rajah);
-}
+@media (min-width: 1200px) {
+  .cocktail{
+    flex-direction: row;
+  }
+  .cocktail-image{
+    grid-template-columns: 1fr;
+    height: 100vh;
+    width: 800px;
+    min-width: 800px;
+    position: sticky;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+  }
 
-.ingredients-details {
-  display: flex;
-  align-items: center;
-}
+  .cocktail-details{
+    transition: all 0.5s ease;
+    opacity: 0.8;
+    grid-template-columns: 2fr;
+    padding: 8px;
+    margin: 6px;
+  }
 
-.ingredients-quantity{
-  transition: opacity 3s;
-  font-weight: 200;
-  padding: 6px;
-  margin: 0;
-}
 
-.cocktail-instructions-details{
-  font-weight: 200;
-  text-indent: 15px;
-  letter-spacing: 1px;
+
+  .ingredients{
+    margin: 0px 8px;
+    padding: 0px 8px;
+    border-left: solid 2px var(--rajah);
+  }
+
+  .ingredients-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .ingredients-quantity{
+    transition: opacity 3s;
+    font-weight: 200;
+    padding: 6px;
+    margin: 0;
+  }
+
+  .cocktail-instructions-details{
+    font-weight: 200;
+    text-indent: 15px;
+    letter-spacing: 1px;
+  }
 }

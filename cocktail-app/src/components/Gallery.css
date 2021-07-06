@@ -1,32 +1,18 @@
 .cards {
   margin: 16px;
-  padding: 8px;
+  /* padding: 8px; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 16px;
-}
-
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (min-width: 768px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
 
-@media (min-width: 1600px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+  .card-cocktail-details{
+    width: 440px;
   }
 }
 
@@ -34,7 +20,7 @@
   background-size: cover;
   background-position: center;
   height: 250px;
-  width: 440px;
+  
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,10 @@
-nav {
+.nav {
+  margin: 0;
+  padding: 0;
+  margin-right: 16px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .fa-cocktail {
@@ -12,25 +16,36 @@ nav {
 
 .logo {
   padding: 6px;
-  margin: 18px;
+  margin: 8px;
   color: var(--rajah);
-  font-size: 26px;
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+.logo, .nav {
+  font-size: 1.5em;
+  margin-right: 8px;
+}
+.nav-link{
+  margin: 6px;
+}
+
 }
 
 .nav-links {
+  white-space: nowrap;
+  padding: 0;
   width: 60%;
   font-weight: 100;
-  font-size: 26px;
+  font-size: 1.1em;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   list-style: none;
-  /* flex-grow: 2; */
 }
 
 .nav-link {
-  padding: 6px;
-  margin: 6px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .nav-link:hover{
